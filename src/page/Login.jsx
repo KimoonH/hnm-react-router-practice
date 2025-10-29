@@ -1,16 +1,15 @@
-import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 
-const Login = () => {
+const Login = ({setAuthenticate}) => {
+  
   const navigate = useNavigate();
 
   const handleLogin = (event) => {
     event.preventDefault();
-    // 로그인 로직은 나중에 추가
+    setAuthenticate(true);
     navigate('/');
   }
-
   return (
     <Container className="login-container">
       <div className="login-box">
