@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import Login from "./page/Login"
 import ProductAll from "./page/ProductAll"
 import ProductDetail from "./page/ProductDetail"
+import NotFound from "./page/NotFound"
 import NavBar from "./components/NavBar"
 import PrivateRoute from "./components/PrivateRoute"
 import { useState } from "react"
@@ -32,6 +33,7 @@ function App() {
             <ProductDetail/>
           </PrivateRoute>
         } />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )
